@@ -148,3 +148,9 @@
 .activeKnob > div {
     left: 22px;
 }
+
+@media (min-width: 1920px) {
+    .projectContainer {
+      max-width: 72% !important;
+    }
+}

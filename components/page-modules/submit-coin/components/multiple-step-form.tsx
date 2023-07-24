@@ -191,38 +191,36 @@ const MultiStepFormContainer: FC = () => {
           </div>
         </>
       )}
+      {(!isMobile || step === 1) && (
+        <div className={styles.logoContainer}>
+          <div
+            className={styles.logoBack}
+            style={{ backgroundImage: `url(${emptyLogoContainer.src})` }}
+          >
+            <img className={styles.logoImage} alt="logo" src={fileObject.url || defaultLogo.src} />
+            {step === 1 && <span className={styles.resolution}>256x256</span>}
+          </div>
+
+          <div className={styles.logoNameContainer}>
+            {fileObject.url && fileObject.name && !isMobile && (
+              <button
+                type="button"
+                className={styles.removeBtn}
+                onClick={() => setFileObject({ url: defaultLogo.src, name: '' })}
+              >
+                <img src={minusSquare.src} alt="remove" />
+              </button>
+            )}
+            <span>
+              {fileObject.url &&
+                !isMobile &&
+                (fileObject.name || 'Optimal dimensions 512x512px, size up to 1MB')}
+            </span>
+          </div>
+        </div>
+      )}
       {step === 1 && (
         <>
-          <div className={styles.logoContainer}>
-            <div
-              className={styles.logoBack}
-              style={{ backgroundImage: `url(${emptyLogoContainer.src})` }}
-            >
-              <img
-                className={styles.logoImage}
-                alt="logo"
-                src={fileObject.url || defaultLogo.src}
-              />
-              {step === 1 && <span className={styles.resolution}>256x256</span>}
-            </div>
-
-            <div className={styles.logoNameContainer}>
-              {fileObject.url && fileObject.name && !isMobile && (
-                <button
-                  type="button"
-                  className={styles.removeBtn}
-                  onClick={() => setFileObject({ url: defaultLogo.src, name: '' })}
-                >
-                  <img src={minusSquare.src} alt="remove" />
-                </button>
-              )}
-              <span>
-                {fileObject.url &&
-                  !isMobile &&
-                  (fileObject.name || 'Optimal dimensions 512x512px, size up to 1MB')}
-              </span>
-            </div>
-          </div>
           <UploadImage
             stepFrame={stepFrame}
             setStep={setStep}
@@ -286,9 +284,9 @@ const MultiStepFormContainer: FC = () => {
         ) : (
           <button
             ref={nextButtonRef}
-            className={`${styles.controlBtn} ${getButtonStatus() ? 'styles.disabled' : ''}`}
+            className={`${styles.controlBtn} ${getButtonStatus() ? styles.disabled : ''}`}
             onClick={() =>
-              onClickButtonHandler(getButtonStatus() ? `next_${step + 1}` : `next_${step + 1}`)
+              onClickButtonHandler(getButtonStatus() ? `next_${step}` : `next_${step + 1}`)
             }
           >
             <ArrowSquareRight disabled={getButtonStatus()} />

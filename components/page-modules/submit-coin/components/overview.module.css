@@ -105,3 +105,9 @@
 .warning span img {
   margin-right: 10px;
 }
+
+@media (min-width: 1920px) {
+  .overviewContainer {
+    max-width: 72% !important;
+  }
+}

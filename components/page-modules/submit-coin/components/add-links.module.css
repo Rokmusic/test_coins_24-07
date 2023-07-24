@@ -99,3 +99,9 @@
 .containerInput:nth-child(4) > img {
   top: calc(50% + 5px);
 }
+
+@media (min-width: 1920px) {
+  .linksContainer {
+    max-width: 72% !important;
+  }
+}
