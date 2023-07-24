@@ -1,0 +1,412 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 130px;
+}
+
+.headlinesContainer {
+    display: flex;
+    width: 100%;
+}
+
+.headlineBlock {
+    display: flex;
+    align-items: center;
+}
+
+.headlineBlock:not(:last-child) {
+    margin-right: 52px;
+}
+
+.headlineBlock span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    border-radius: 12px;
+    background-color: rgba(29, 29, 29, 1);
+}
+
+.headlineBlock h3 {
+    display: inline;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.active span {
+    background-color: rgba(24, 61, 212, 1);
+}
+
+.active h3 {
+    color: #fff;
+}
+
+.controlBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 14px 24px 14px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    background: rgba(24, 61, 212, 1);
+    box-shadow: -10px 10px 24px 0px rgba(24, 61, 212, 0.05);
+    text-transform: uppercase;
+}
+
+.controlBtn > svg {
+    margin-right: 6px;
+}
+
+.controls {
+    display: flex;
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 280px;
+}
+
+.controlBtnNextFirstStep {
+    top: calc(100% - 70px);
+    left: 115px;
+}
+
+.controls > button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.controlsUpload {
+    position: absolute;
+    top: calc(100% - 70px);
+    /* bottom: -68px; */
+    left: 0;
+}
+
+.container * {
+    color: #fff;
+}
+
+.logoContainer {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    margin-right: 24px;
+}
+
+.resolution, .resolutionSmall {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.31px;
+    background: rgba(28, 29, 36, 1);
+    border-radius: 8px;
+    gap: 4px;
+}
+
+.resolutionSmall {
+    right: 0;
+    bottom: -25px;
+}
+
+.logoBack {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.logoImage {
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.removeBtn {
+    display: inline-flex;
+    margin-right: 10px;
+    margin-top: auto;
+}
+
+.logoNameContainer {
+    display: flex;
+    align-items: baseline;
+}
+
+.logoNameContainer > span {
+    min-width: 320px;
+    margin-top: 23px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.011em;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.uploadContainer {
+    display: flex;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.optionImage {
+    display: initial !important;
+    margin-right: 4px;
+}
+
+.option span:first-child {
+    font-size: 14px;
+}
+
+.input {
+    height: 50px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 46px;
+    font-size: 14px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: rgba(29, 29, 29, 1);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.containerInput {
+    flex: 0 1 calc(50% - 11px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.containerInput:nth-child(6){
+    flex: 0 1 100%;
+}
+
+.containerInput > textarea {
+    height: 240px;
+    margin-bottom: 20px;
+    padding: 16px;
+    font-size: 14px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: rgba(29, 29, 29, 1);
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
+    border: none;
+    resize: none;
+}
+
+.containerInput > div:first-child {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: -0.011em;
+}
+
+.inputIcon {
+    position: absolute;
+    top: calc(50% + 6px);
+    right: 16px;
+    transform: translate(0, -50%);
+}
+
+
+.disabled {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.2);
+    user-select: none;
+}
+
+.knob {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    transition: left 0.2s ease-out; 
+}
+
+.attention {
+    padding: 16px 12px;
+    background: rgba(28, 29, 36, 1);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: -0.011em;
+}
+
+.headline img {
+    margin-right: 8px;
+}
+
+.paragraph {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.011em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 1920px) {
+  .headlineBlock h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1366px) {
+    .headlinesContainer h3 {
+        font-size: 22px;
+    }
+    .controlBtnNextFirstStep {
+        left: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .headlinesContainer h3 {
+        font-size: 14px;
+        
+    }
+    .headlineBlock:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headlinesContainer {
+        justify-content: center;
+    }
+    .headlineBlock {
+        margin-right: 6px !important;
+    }
+    .headlineBlock h3 {
+        display: none;
+        max-width: 55px;
+        margin-right: 16px;
+        margin-right: 6px;
+        white-space: inherit;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+    }
+    .active h3 {
+        display: initial !important;
+        margin-right: 16px;
+    }
+    .headlineBlock span {
+        min-width: unset !important;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        margin-right: 0;
+    }
+    .active span {
+        margin-right: 12px;
+    }
+    .resolution {
+        background: none;
+        bottom: -25px;
+    }
+    .logoContainer {
+        margin-right: 22px;
+        width: 228px;
+        height: 228px;
+    }
+    .headlinesContainer {
+        margin-bottom: 32px;
+    }
+    .controlBtnNextFirstStep {
+        width: 100%;
+        top: unset;
+        left: 0;
+        bottom: -25px;
+    }
+    .controls button {
+        width: 100%;
+    }
+    .container {
+        padding-bottom: 110px;
+    }
+    .logoNameContainer > span {
+        display: none;
+    }
+    .mobileFile {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+        padding: 16px 12px 16px 12px;
+        border-radius: 12px;
+        background: rgba(28, 29, 36, 1);
+    }
+    .mobileFile > span {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+        letter-spacing: -0.011em;
+    }
+    .mobileFile > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobileFile > div > span {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: -0.011em;
+    }
+
+    .mobileFile > div > button {
+        margin-right: 0;
+    }
+    .logoBackMobile {
+        width: 128px;
+        height: 128px;
+    }
+    .mobileLogoContainer {
+        
+    }
+}

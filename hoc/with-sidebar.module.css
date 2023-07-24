@@ -1,0 +1,28 @@
+.componentContainer {
+    width: 100%;
+    max-width: 1027px;
+}
+
+.sidebarContainer {
+    display: none;
+}
+
+.withSidebar {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+/* xxl */
+@media (min-width: 1920px) {
+    .sidebarContainer {
+        display: block;
+        width: 248px;
+    }
+}
+
+@media (max-width: 1920px) {
+  .componentContainer {
+    max-width: fit-content !important;
+  }
+}

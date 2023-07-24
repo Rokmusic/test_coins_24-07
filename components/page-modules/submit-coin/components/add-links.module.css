@@ -1,0 +1,101 @@
+.linksContainer {
+  width: 77%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.linksContainer > label {
+  flex: 0 1 calc(50% - 11px) !important;
+}
+
+.containerInput:nth-child(4) > img {
+  top: calc(50% + 2px);
+}
+
+.containerInput {
+  flex: 0 1 calc(50% - 11px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+}
+
+.containerInput > div:first-child {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: -0.011em;
+}
+
+.containerInput:nth-child(6){
+  flex: 0 1 100%;
+}
+
+.containerInput > textarea {
+  height: 240px;
+  margin-bottom: 20px;
+  padding: 16px;
+  font-size: 14px;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgba(29, 29, 29, 1);
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; */
+  border: none;
+  resize: none;
+}
+
+.containerInput > div:first-child {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: -0.011em;
+}
+
+.input {
+  height: 50px;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 46px;
+  font-size: 14px;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgba(29, 29, 29, 1);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.inputSocial {
+  padding: 0 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.inputIconSocial + input {
+  padding-left: 46px;
+  padding-right: 16px;
+}
+
+.inputIconSocial {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 16px;
+  transform: translate(0, -50%);
+}
+
+.containerInput:nth-child(5) > img {
+  top: calc(50% + 2px);
+}
+
+.containerInput:nth-child(4) > img {
+  top: calc(50% + 5px);
+}
