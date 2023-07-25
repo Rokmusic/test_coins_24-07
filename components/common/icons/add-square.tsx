@@ -15,7 +15,7 @@ const AddSquare: FC<IAddSquareProps> = ({ isMobile = false }) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M6 9.59375H12" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6 9.59375H12" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
           <path
             d="M9 12.5938V6.59375"
             stroke="white"

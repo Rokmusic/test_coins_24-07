@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import { InputText } from 'primereact/inputtext';
 
+import { useMedia } from 'use-media';
+
 import { ILinksDataProps, ILinksValue, TSteps, TTypesDataLinks } from '../submit-coin.type';
 
 import styles from './add-links.module.css';
@@ -12,9 +14,16 @@ import telegramIcon from '@/public/telegram-white.svg';
 import twitterIcon from '@/public/twitter-white.svg';
 import discordIcon from '@/public/discord-white.svg';
 import facebookIcon from '@/public/facebook-white.svg';
-import reddirIcon from '@/public/reddit-white.svg';
+import redditIcon from '@/public/reddit-white.svg';
+
+import telegramIconXl from '@/public/telegram-link.svg';
+import twitterIconXl from '@/public/twitter-link.svg';
+import discordIconXl from '@/public/discord-link.svg';
+import facebookIconXl from '@/public/facebook-link.svg';
+import redditIconXl from '@/public/reddit-link.svg';
 
 const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinksData }) => {
+  const isMobile = useMedia({ maxWidth: 768 });
   useEffect(() => {
     const type = stepFrame.split('_')[0];
     const step = Number(stepFrame.split('_')[1]);
@@ -50,9 +59,9 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
         </div>
         <Image
           className={styles.inputIconSocial}
-          src={telegramIcon.src}
-          width={14}
-          height={14}
+          src={isMobile ? telegramIconXl.src : telegramIcon.src}
+          width={isMobile ? 24 : 14}
+          height={isMobile ? 24 : 14}
           alt="telegram"
         />
         <InputText
@@ -71,9 +80,9 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
         </div>
         <Image
           className={styles.inputIconSocial}
-          src={twitterIcon.src}
-          width={14}
-          height={14}
+          src={isMobile ? twitterIconXl : twitterIcon.src}
+          width={isMobile ? 24 : 14}
+          height={isMobile ? 24 : 14}
           alt="Twitter"
         />
         <InputText
@@ -84,18 +93,16 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
           className={`${styles.input} ${styles.inputSocial}`}
           placeholder="twitter.com/"
         />
-        {/* <img className={styles.inputIconSocial} src={tickSquare.src} alt="tick square" /> */}
       </label>
-
       <label className={`${styles.containerInput}`}>
         <div>
           <span>Discord</span>
         </div>
         <Image
           className={styles.inputIconSocial}
-          src={discordIcon.src}
-          width={15}
-          height={15}
+          src={isMobile ? discordIconXl.src : discordIcon.src}
+          width={isMobile ? 24 : 15}
+          height={isMobile ? 24 : 15}
           alt="Discord"
         />
         <InputText
@@ -106,7 +113,6 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
           className={`${styles.input} ${styles.inputSocial}`}
           placeholder="discord.com/"
         />
-        {/* <img className={styles.inputIconSocial} src={tickSquare.src} alt="tick square" /> */}
       </label>
 
       <label className={`${styles.containerInput}`}>
@@ -115,9 +121,9 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
         </div>
         <Image
           className={styles.inputIconSocial}
-          src={facebookIcon.src}
-          width={14}
-          height={14}
+          src={isMobile ? facebookIconXl.src : facebookIcon.src}
+          width={isMobile ? 24 : 14}
+          height={isMobile ? 24 : 14}
           alt="Facebook"
         />
         <InputText
@@ -128,7 +134,6 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
           className={`${styles.input} ${styles.inputSocial}`}
           placeholder="facebook.com/"
         />
-        {/* <img className={styles.inputIconSocial} src={tickSquare.src} alt="tick square" /> */}
       </label>
 
       <label className={`${styles.containerInput}`}>
@@ -137,9 +142,9 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
         </div>
         <Image
           className={styles.inputIconSocial}
-          src={reddirIcon.src}
-          width={15}
-          height={15}
+          src={isMobile ? redditIconXl.src : redditIcon.src}
+          width={isMobile ? 24 : 15}
+          height={isMobile ? 24 : 15}
           alt="Reddit"
         />
         <InputText
@@ -150,7 +155,6 @@ const AddLinks: FC<ILinksDataProps> = ({ stepFrame, setStep, linksData, setLinks
           className={`${styles.input} ${styles.inputSocial}`}
           placeholder="reddit.com/"
         />
-        {/* <img className={styles.inputIconSocial} src={tickSquare.src} alt="tick square" /> */}
       </label>
 
       <label className={`${styles.containerInput}`}>

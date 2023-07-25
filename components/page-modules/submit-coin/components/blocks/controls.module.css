@@ -1,0 +1,75 @@
+.controls {
+    display: flex;
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 280px;
+}
+
+.controlBtnNextFirstStep {
+    top: calc(100% - 70px);
+    left: 138px;
+}
+
+.controls > button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.controlBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 14px 24px 14px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    background: rgba(24, 61, 212, 1);
+    box-shadow: -10px 10px 24px 0px rgba(24, 61, 212, 0.05);
+    text-transform: uppercase;
+}
+
+.controlBtn > svg {
+    margin-right: 6px;
+}
+
+.disabled {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.2);
+    user-select: none;
+    opacity: .5;
+}
+
+@media (max-width: 1366px) {
+    .controlBtnNextFirstStep {
+        left: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .controls {
+        width: 100%;
+        flex-direction: column-reverse;
+        left: 0;
+        top: calc(100% - 140px);
+    }
+    .controls button:last-child {
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .controls button:last-child > svg {
+        margin-right: 0;
+        margin-left: 8px;
+    }
+    .controls button {
+        width: 100%;
+    }
+    .controlBtnNextFirstStep {
+        width: 100%;
+        top: unset;
+        left: 0;
+        bottom: 15px;
+    }
+}

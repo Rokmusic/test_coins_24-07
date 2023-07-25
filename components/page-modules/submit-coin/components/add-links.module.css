@@ -105,3 +105,28 @@
     max-width: 72% !important;
   }
 }
+
+@media (max-width: 1366px) {
+  .linksContainer {
+      width: 70%;
+      margin-right: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .linksContainer {
+      width: calc(68% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .linksContainer {
+      width: 100%;
+      margin-left: auto;
+      margin-top: 30px;
+  }
+  .linksContainer label {
+    flex: unset;
+    min-width: 100%;
+  }
+}

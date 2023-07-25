@@ -11,6 +11,7 @@ const Calendar: FC = () => {
           strokeMiterlimit="10"
           stroke-minecap="round"
           stroke-minejoin="round"
+          fill="white"
         />
         <path
           d="M12 1.5V3.75"

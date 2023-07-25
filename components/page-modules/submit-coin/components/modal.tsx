@@ -4,6 +4,8 @@ import { useClickOutside } from 'primereact/hooks';
 
 import Link from 'next/link';
 
+import { useMedia } from 'use-media';
+
 import { IModalProps } from '../submit-coin.type';
 
 import styles from './modal.module.css';
@@ -12,6 +14,7 @@ import bgModal from '@/assets/images/modal-steps.webp';
 import bgFrameModal from '@/public/bg-frame-modal.svg';
 
 const Modal: FC<IModalProps> = ({ setIsOpenModal, setStepModal, setStepFrame }) => {
+  const isMobile = useMedia({ maxWidth: 768 });
   const modalRef = useRef<HTMLDivElement>(null);
   useClickOutside(modalRef, () => {
     setIsOpenModal(false);
@@ -27,7 +30,10 @@ const Modal: FC<IModalProps> = ({ setIsOpenModal, setStepModal, setStepFrame }) 
       className={styles.modalContainer}
       style={{ backgroundImage: `url(${bgModal.src})` }}
     >
-      <div className={styles.modalFrame} style={{ backgroundImage: `url(${bgFrameModal.src})` }}>
+      <div
+        className={styles.modalFrame}
+        style={{ backgroundImage: isMobile ? '' : `url(${bgFrameModal.src})` }}
+      >
         <h3 className={styles.headline_3}>You coin has submitted on our site!</h3>
         <div className={styles.promoteContainer}>
           <div className={styles.headline}>

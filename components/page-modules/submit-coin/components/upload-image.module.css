@@ -82,13 +82,14 @@
         margin-right: 0;
     }
     .resolution, .resolutionSmall {
-        background: none;
-        bottom: -25px;
+        border-radius: 2px;
+        bottom: -30px;
+        right: 0;
     }
     .controlsUpload {
         width: 100%;
         top: unset;
-        bottom: 40px;
+        bottom: 90px;
     }
     /* .controlsUpload span {
         width: 100% !important;
@@ -111,7 +112,7 @@
         margin-right: auto;
         position: absolute;
         top: 50%;
-        right: calc(50% - 65px);
+        right: calc(50% - 50px);
         transform: translate(-50%, -50%);
     }
 }

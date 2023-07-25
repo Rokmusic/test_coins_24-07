@@ -103,7 +103,7 @@
     position: relative;
 }
 
-.dateInput > div:not(:first-child){
+.dateInput > div:nth-child(2){
     display: flex;
     align-items: center;
     height: 50px;
@@ -152,5 +152,45 @@
 @media (min-width: 1920px) {
     .projectContainer {
       max-width: 72% !important;
+    }
+}
+
+@media (max-width: 1366px) {
+    .projectContainer {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .projectContainer {
+        max-width: calc(68% - 40px);
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .projectContainer {
+        max-width: 100%;
+        margin-top: 60px;
+    }
+    .projectContainer > label {
+        flex: 0 1 calc(100%);
+        margin-bottom: 16px;
+    }
+    .required {
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    .projectContainer > label:nth-child(4), .projectContainer > label:nth-child(5) {
+        max-width: calc(50% - 9px);
+    }
+    .inputIcon svg g {
+        opacity: 1;
+    }
+    .containerInput * {
+        font-size: 12px !important;
+    }
+    .containerInput textarea {
+        font-size: 12px;
     }
 }
